@@ -1,0 +1,203 @@
+
+
+:root {
+	--navy: royalblue;
+	--orange: #f28c28;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1c2733;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 4px solid var(--orange);
+}
+
+header img {
+  height: 44px;
+  width: auto;
+}
+
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  padding: 48px 20px;
+  color: #fff;
+  background:
+    linear-gradient(rgba(18, 38, 63, 0.7), rgba(18, 38, 63, 0.7)),
+    url("./images/hero.jpg") center / cover,
+    var(--navy);
+}
+
+.hero-content {
+  max-width: 34rem;
+}
+
+.hero h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-whatsapp {
+  background: #128c4a;
+  color: #fff;
+}
+
+.btn-call {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+
+
+
+
+.gallery {
+  padding: 48px 20px;
+}
+
+.gallery h2 {
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 20px;
+}
+
+.about img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.about-content h2 {
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+}
+
+
+.routes {
+  padding: 48px 20px;
+  background: #f4f6f8;
+  text-align: center;
+}
+
+.routes h2 {
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+}
+
+.routes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.routes-grid span {
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 20px;
+  background: var(--navy);
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
+
+/* ---- Mobile (screens narrower than 768px) ---- */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    text-align: center;
+  }
+}
